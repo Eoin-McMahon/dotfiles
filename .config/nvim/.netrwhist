@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/eoin/.config/nvim/plugins'
+let g:netrw_dirhist_6='/home/eoin/.config/nvim'
+let g:netrw_dirhist_5='/home/eoin/.config'
+let g:netrw_dirhist_4='/home/eoin/.config/nvim/keys'
+let g:netrw_dirhist_3='/home/eoin/.config/nvim'
+let g:netrw_dirhist_2='/home/eoin/.config/nvim/keys'
+let g:netrw_dirhist_1='/home/eoin/.config/nvim'
