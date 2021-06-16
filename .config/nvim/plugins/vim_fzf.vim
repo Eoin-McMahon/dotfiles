@@ -6,3 +6,4 @@ noremap <leader>f <Esc><Esc>:BLines<CR>
 noremap <leader>g <Esc><Esc>:GFiles<CR>
 
 let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+let g:fzf_layout = { 'down':  '40%'}
