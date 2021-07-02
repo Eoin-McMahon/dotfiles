@@ -1,0 +1,18 @@
+
+{
+  // Require .prettierrc
+  "prettier.requireConfig": true,
+
+  // Tslint on save
+  "pylint.enable": true,
+  "pylint.autoFixOnSave": true,
+
+  // Run prettier (and others)
+  "coc.preferences.formatOnSaveFiletypes": [
+    "markdown",
+    "Markdown",
+    "C",
+    "typescript",
+    "typescriptreact"
+  ]
+}

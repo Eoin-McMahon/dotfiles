@@ -42,8 +42,14 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set autochdir                           " Your working directory will always be the same as your working directory
+set guifont=FiraCode\ Nerd\ Font,DejaVuSans:h16
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 " You can't stop me
 cmap w!! w !sudo tee %
+
+let g:neovide_transparency=0.96
+let g:neovide_cursor_animation_length=0.08
+let g:neovide_cursor_trail_length=0.8
+" let g:neovide_cursor_vfx_mode = "wireframe"

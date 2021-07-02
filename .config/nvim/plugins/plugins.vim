@@ -1,11 +1,41 @@
 " ------------------------
-" Installed Plugins
+"  Vim-Plug Autoinstall
 " ------------------------
 
+let vimplug_exists=expand('~/.nvim/autoload/plug.vim')
+if has('win32')&&!has('win64')
+let curl_exists=expand('C:\Windows\Sysnative\curl.exe')
+else
+let curl_exists=expand('curl')
+endif
+
+let g:vim_bootstrap_langs = "c,python,rust"
+let g:vim_bootstrap_editor = "nvim"				" nvim or vim
+let g:vim_bootstrap_theme = "gruvbox"
+let g:vim_bootstrap_frams = ""
+
+if !filereadable(vimplug_exists)
+if !executable(curl_exists)
+echoerr "You have to install curl or first install vim-plug yourself!"
+execute "q!"
+endif
+echo "Installing Vim-Plug..."
+echo ""
+silent exec "!"curl_exists" -fLo " . shellescape(vimplug_exists) . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+let g:not_finish_vimplug = "yes"
+
+autocmd VimEnter * PlugInstall
+endif
+
+
+
+" ------------------------
+" Installed Plugins
+" ------------------------
+"
 filetype plugin on
 call plug#begin('~/.vim/plugged')
     Plug 'gruvbox-community/gruvbox'
-    Plug 'liuchengxu/vim-which-key'
     Plug 'preservim/nerdtree'
     Plug 'mhinz/vim-startify'    
     Plug 'ryanoasis/vim-devicons'
@@ -19,6 +49,16 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'mbbill/undotree'
     Plug 'martinda/Jenkinsfile-vim-syntax'
+    Plug 'bagrat/vim-buffet'
+    Plug 'airblade/vim-rooter'
+
+    " COC specific  plugins
+    Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+    Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'} " mru and stuff
+    Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'} " color highlighting
 call plug#end()
 
 " ------------------------
@@ -28,9 +68,12 @@ call plug#end()
 source $HOME/.config/nvim/plugins/vim_nerdtree.vim
 source $HOME/.config/nvim/plugins/vim_sneak.vim
 source $HOME/.config/nvim/plugins/vim_commentary.vim
-source $HOME/.config/nvim/plugins/vim_whichkey.vim
+source $HOME/.config/nvim/plugins/vim_startify.vim
+source $HOME/.config/nvim/plugins/vim_rooter.vim
 source $HOME/.config/nvim/plugins/vim_fzf.vim
 source $HOME/.config/nvim/plugins/vim_undotree.vim
+source $HOME/.config/nvim/plugins/vim_coc.vim
+source $HOME/.config/nvim/plugins/vim_buffet.vim
 
 " ------------------------
 " Colours
