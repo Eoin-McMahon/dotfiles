@@ -49,6 +49,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'mbbill/undotree'
     Plug 'martinda/Jenkinsfile-vim-syntax'
+    Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
     Plug 'bagrat/vim-buffet'
     Plug 'airblade/vim-rooter'
 
@@ -70,6 +71,7 @@ source $HOME/.config/nvim/plugins/vim_sneak.vim
 source $HOME/.config/nvim/plugins/vim_commentary.vim
 source $HOME/.config/nvim/plugins/vim_startify.vim
 source $HOME/.config/nvim/plugins/vim_rooter.vim
+source $HOME/.config/nvim/plugins/vim_whichkey.vim
 source $HOME/.config/nvim/plugins/vim_fzf.vim
 source $HOME/.config/nvim/plugins/vim_undotree.vim
 source $HOME/.config/nvim/plugins/vim_coc.vim

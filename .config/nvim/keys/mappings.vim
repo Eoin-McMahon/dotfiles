@@ -59,3 +59,4 @@ nnoremap <Leader>O O<Esc>^Da
 
 " Use escape to exit terminal
 tnoremap <Esc> <C-\><C-n>
+nmap <leader>t :term<CR>
