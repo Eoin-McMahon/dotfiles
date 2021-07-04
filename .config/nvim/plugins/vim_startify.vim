@@ -5,4 +5,4 @@ let g:startify_commands = [
         \ ]
 
 " open startfy with leader S
-nmap <leader>S :Startify<CR>
+nmap <leader>s :Startify<CR>
