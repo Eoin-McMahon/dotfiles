@@ -11,6 +11,10 @@ nnoremap <M-l>    :vertical resize +2<CR>
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
 
+
+" Ctrl-l to clear previous search
+nnoremap <leader>? :nohlsearch<CR>
+
 " SHIFT-TAB will go back
 nnoremap <S-TAB> :bprevious<CR>
 

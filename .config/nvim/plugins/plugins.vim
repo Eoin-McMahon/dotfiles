@@ -27,31 +27,31 @@ let g:not_finish_vimplug = "yes"
 autocmd VimEnter * PlugInstall
 endif
 
-
-
 " ------------------------
 " Installed Plugins
 " ------------------------
 "
 filetype plugin on
 call plug#begin('~/.vim/plugged')
-    Plug 'gruvbox-community/gruvbox'
-    Plug 'preservim/nerdtree'
-    Plug 'mhinz/vim-startify'    
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'tpope/vim-fugitive'    
-    Plug 'justinmk/vim-sneak'
-    Plug 'tpope/vim-commentary'
-    Plug 'junegunn/fzf'
-    Plug 'junegunn/fzf.vim'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'mbbill/undotree'
-    Plug 'martinda/Jenkinsfile-vim-syntax'
-    Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-    Plug 'bagrat/vim-buffet'
-    Plug 'airblade/vim-rooter'
+    Plug 'gruvbox-community/gruvbox'            " Colour theme
+    Plug 'preservim/nerdtree'                   " Project explorer
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " colour in nerd tree
+    Plug 'mhinz/vim-startify'                   " emacs style startup screen
+    Plug 'ryanoasis/vim-devicons'               " file icon support
+    Plug 'tpope/vim-fugitive'                   " Git commands from vim command mode
+    Plug 'justinmk/vim-sneak'                   " Better navigation
+    Plug 'tpope/vim-commentary'                 " Easy code commenting
+    Plug 'junegunn/fzf'                         " fuzzy finding
+    Plug 'junegunn/fzf.vim'                     " fuzzy finding
+    Plug 'vim-airline/vim-airline'              " Better status bar
+    Plug 'vim-airline/vim-airline-themes'       " themes for airline
+    Plug 'mbbill/undotree'                      " persistent undo's
+    Plug 'martinda/Jenkinsfile-vim-syntax'      " Syntax highlighting in jenkinsfiles
+    Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }    " emacs style keymap viewer
+    Plug 'bagrat/vim-buffet'                    " Better buffer managment
+    Plug 'airblade/vim-rooter'                  " change working directory to root of project
+    Plug 'airblade/vim-gitgutter'               " Git information in vim gutter
+    Plug 'luochen1990/rainbow'                  " Add colour to nested brackets
 
     " COC specific  plugins
     Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
@@ -62,9 +62,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'} " color highlighting
 call plug#end()
 
-" ------------------------
+" --------------------------------------
 " Pull in plugin specific configurations
-" ------------------------
+" --------------------------------------
 
 source $HOME/.config/nvim/plugins/vim_nerdtree.vim
 source $HOME/.config/nvim/plugins/vim_sneak.vim
@@ -76,6 +76,7 @@ source $HOME/.config/nvim/plugins/vim_fzf.vim
 source $HOME/.config/nvim/plugins/vim_undotree.vim
 source $HOME/.config/nvim/plugins/vim_coc.vim
 source $HOME/.config/nvim/plugins/vim_buffet.vim
+source $HOME/.config/nvim/plugins/vim_rainbow.vim
 
 " ------------------------
 " Colours
