@@ -1,4 +1,5 @@
 # If you come from bash you might have to change your $PATH.
+#
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -119,13 +120,15 @@ export TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
 alias tn="TERM=xterm-256color tmux -u -f $TMUX_CONFIG new"
 alias ta="TERM=xterm-256color tmux -u -f $TMUX_CONFIG attach"
 alias tc="nvim $TMUX_CONFIG"
+alias tl="tmux ls"
 
 # handy tools
+alias ls="exa -l --icons"
 alias ccat='pygmentize -g'
 alias zshrc='vim ~/.zshrc'
+alias note="$HOME/bin/note"
 
 # Work
 alias errno='ccat /opt/gnuarmemb/arm-none-eabi/include/sys/errno.h'
 alias devconf="vim $HOME/TargetTestsDevConf/user_devconf.yml"
-
 
