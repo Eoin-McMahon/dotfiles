@@ -1,2 +1,2 @@
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-set timeoutlen=1000
+set timeoutlen=200

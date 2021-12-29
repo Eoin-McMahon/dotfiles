@@ -39,10 +39,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-startify'                   " emacs style startup screen
     Plug 'ryanoasis/vim-devicons'               " file icon support
     Plug 'tpope/vim-fugitive'                   " Git commands from vim command mode
-    Plug 'justinmk/vim-sneak'                   " Better navigation
     Plug 'tpope/vim-commentary'                 " Easy code commenting
-    Plug 'junegunn/fzf'                         " fuzzy finding
-    Plug 'junegunn/fzf.vim'                     " fuzzy finding
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
     Plug 'vim-airline/vim-airline'              " Better status bar
     Plug 'vim-airline/vim-airline-themes'       " themes for airline
     Plug 'mbbill/undotree'                      " persistent undo's
@@ -54,12 +53,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'luochen1990/rainbow'                  " Add colour to nested brackets
 
     " COC specific  plugins
-    Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-    Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'} " mru and stuff
-    Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'} " color highlighting
+    " Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+    " Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+    " Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'} " mru and stuff
+    " Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'} " color highlighting
 call plug#end()
 
 " --------------------------------------
@@ -67,14 +66,12 @@ call plug#end()
 " --------------------------------------
 
 source $HOME/.config/nvim/plugins/vim_nerdtree.vim
-source $HOME/.config/nvim/plugins/vim_sneak.vim
 source $HOME/.config/nvim/plugins/vim_commentary.vim
 source $HOME/.config/nvim/plugins/vim_startify.vim
 source $HOME/.config/nvim/plugins/vim_rooter.vim
 source $HOME/.config/nvim/plugins/vim_whichkey.vim
 source $HOME/.config/nvim/plugins/vim_fzf.vim
 source $HOME/.config/nvim/plugins/vim_undotree.vim
-source $HOME/.config/nvim/plugins/vim_coc.vim
 source $HOME/.config/nvim/plugins/vim_buffet.vim
 source $HOME/.config/nvim/plugins/vim_rainbow.vim
 
